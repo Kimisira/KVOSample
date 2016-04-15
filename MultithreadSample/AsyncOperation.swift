@@ -11,6 +11,7 @@ import Foundation
 //NSOperatioクラスの拡張
 class AsyncOperation:NSOperation{
     
+    //処理が実行中かどうかを返す
     override var  executing: Bool{
         get{ return _executing }
         set(newValue){
@@ -25,7 +26,7 @@ class AsyncOperation:NSOperation{
     }
     private var _executing = false
     
-    
+    //処理が終了したかどうかを返す
     override var finished: Bool{
         get {return _finished }
         set(newValue){
@@ -39,7 +40,7 @@ class AsyncOperation:NSOperation{
     }
     private var _finished = false
     
-    
+    //処理を非同期で実行するかどうかを返す
     override var asynchronous: Bool{
         get{
             return true
